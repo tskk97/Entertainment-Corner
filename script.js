@@ -13,7 +13,7 @@ function generalSearch(){
             title = title + tempTitle[i]
         }
     }
-    var url = 'http://www.omdbapi.com/?s='+title+'&apikey=1921ab67'
+    var url = 'https://www.omdbapi.com/?s='+title+'&apikey=1921ab67'
     console.log(url)
     xhr.open('GET', url)
     xhr.send()
@@ -24,7 +24,7 @@ function generalSearch(){
         }
         else{
             localStorage.setItem('output',JSON.stringify(output))
-            location.replace('/home/saikiran/projects/masai/sprint-3/general-search.html')
+            location.replace('general-search.html')
         }
     }
 }
@@ -44,7 +44,7 @@ function searchMovie(){
             title = title + tempTitle[i]
         }
     }
-    var url = 'http://www.omdbapi.com/?t='+title+'&apikey=1921ab67'
+    var url = 'https://www.omdbapi.com/?t='+title+'&apikey=1921ab67'
     console.log(url)
     xhr.open('GET', url)
     xhr.send()
@@ -55,7 +55,7 @@ function searchMovie(){
         }
         else{
             localStorage.setItem('output',JSON.stringify(output))
-            location.replace('/home/saikiran/projects/masai/sprint-3/title-search.html')
+            location.replace('title-search.html')
         }
     }
 }
